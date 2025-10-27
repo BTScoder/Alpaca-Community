@@ -1,0 +1,71 @@
+{
+  "hair": [
+    { "name": "default", "path": "/alpaca/hair/default.png" },
+    { "name": "curls", "path": "/alpaca/hair/curls.png" },
+    { "name": "short", "path": "/alpaca/hair/short.png" },
+    { "name": "bang", "path": "/alpaca/hair/bang.png" },
+    { "name": "elegant", "path": "/alpaca/hair/elegant.png" },
+    { "name": "quiff", "path": "/alpaca/hair/quiff.png" }
+  ],
+  "accessories": [
+    { "name": "none", "path": "" },
+    { "name": "earings", "path": "/alpaca/accessories/earings.png" },
+    { "name": "flower", "path": "/alpaca/accessories/flower.png" },
+    { "name": "glasses", "path": "/alpaca/accessories/glasses.png" },
+    { "name": "headphone", "path": "/alpaca/accessories/headphone.png" }
+  ],
+  "background": [
+    { "name": "blue50", "path": "/alpaca/backgrounds/blue50.png" },
+    { "name": "blue60", "path": "/alpaca/backgrounds/blue60.png" },
+    { "name": "blue70", "path": "/alpaca/backgrounds/blue70.png" },
+    { "name": "darkblue30", "path": "/alpaca/backgrounds/darkblue30.png" },
+    { "name": "darkblue50", "path": "/alpaca/backgrounds/darkblue50.png" },
+    { "name": "darkblue70", "path": "/alpaca/backgrounds/darkblue70.png" },
+    { "name": "green50", "path": "/alpaca/backgrounds/green50.png" },
+    { "name": "green60", "path": "/alpaca/backgrounds/green60.png" },
+    { "name": "green70", "path": "/alpaca/backgrounds/green70.png" },
+    { "name": "grey40", "path": "/alpaca/backgrounds/grey40.png" },
+    { "name": "grey70", "path": "/alpaca/backgrounds/grey70.png" },
+    { "name": "grey80", "path": "/alpaca/backgrounds/grey80.png" },
+    { "name": "red50", "path": "/alpaca/backgrounds/red50.png" },
+    { "name": "red60", "path": "/alpaca/backgrounds/red60.png" },
+    { "name": "red70", "path": "/alpaca/backgrounds/red70.png" },
+    { "name": "yellow50", "path": "/alpaca/backgrounds/yellow50.png" },
+    { "name": "yellow60", "path": "/alpaca/backgrounds/yellow60.png" },
+    { "name": "yellow70", "path": "/alpaca/backgrounds/yellow70.png" }
+  ],
+  "ears": [
+    { "name": "default", "path": "/alpaca/ears/default.png" },
+    { "name": "tiltbackward", "path": "/alpaca/ears/tilt-backward.png" },
+    { "name": "tiltforward", "path": "/alpaca/ears/tilt-forward.png" }
+  ],
+  "eyes": [
+    { "name": "default", "path": "/alpaca/eyes/default.png" },
+    { "name": "angry", "path": "/alpaca/eyes/angry.png" },
+    { "name": "naughty", "path": "/alpaca/eyes/naughty.png" },
+    { "name": "panda", "path": "/alpaca/eyes/panda.png" },
+    { "name": "smart", "path": "/alpaca/eyes/smart.png" },
+    { "name": "star", "path": "/alpaca/eyes/star.png" }
+  ],
+  "leg": [
+    { "name": "default", "path": "/alpaca/leg/default.png" },
+    { "name": "bubbletea", "path": "/alpaca/leg/bubble-tea.png" },
+    { "name": "cookie", "path": "/alpaca/leg/cookie.png" },
+    { "name": "gameConsole", "path": "/alpaca/leg/game-console.png" },
+    { "name": "tiltbackward", "path": "/alpaca/leg/tilt-backward.png" },
+    { "name": "tiltforward", "path": "/alpaca/leg/tilt-forward.png" }
+  ],
+  "mouth": [
+    { "name": "default", "path": "/alpaca/mouth/default.png" },
+    { "name": "astonished", "path": "/alpaca/mouth/astonished.png" },
+    { "name": "eating", "path": "/alpaca/mouth/eating.png" },
+    { "name": "laugh", "path": "/alpaca/mouth/laugh.png" },
+    { "name": "tongue", "path": "/alpaca/mouth/tongue.png" }
+  ],
+  "neck": [
+    { "name": "default", "path": "/alpaca/neck/default.png" },
+    { "name": "bendbackward", "path": "/alpaca/neck/bend-backward.png" },
+    { "name": "bendforward", "path": "/alpaca/neck/bend-forward.png" },
+    { "name": "thick", "path": "/alpaca/neck/thick.png" }
+  ]
+}
