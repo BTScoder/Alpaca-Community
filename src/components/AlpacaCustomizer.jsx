@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import AlpacaDisplay from "./AlpacaDisplay";
 import AlpacaForm from "./AlpacaForm";
 import AlpacaStyling from "./AlpacaStyling";
@@ -12,6 +13,11 @@ const AlpacaCustomizer = ({ setData, data }) => {
   const [categories, setCategories] = useState([]);
   const [customize, setCustomize] = useState(false);
 
+  const navigate = useNavigate();
+
+  const goToPage = () => {
+    navigate("/");
+  };
   // Fetch Alpaca Data
   useEffect(() => {
     fetch("data/data.json")
@@ -61,6 +67,7 @@ const AlpacaCustomizer = ({ setData, data }) => {
     });
     setName("");
     setBio("");
+    goToPage();
   };
 
   // Random Alpaca
