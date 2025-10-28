@@ -17,7 +17,13 @@ function useLocalStorage(key, initialValue) {
     window.localStorage.setItem(key, JSON.stringify(storedValue));
   }, [key, storedValue]);
 
-  return [storedValue, setStoredValue];
+  const filterItem = (callback) => {
+    if (!Array.isArray(storedValue)) return;
+    const filteredItems = storedValue.filter(callback);
+    setStoredValue(filteredItems);
+  };
+
+  return [storedValue, setStoredValue, filterItem];
 }
 
 export default useLocalStorage;

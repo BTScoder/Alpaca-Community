@@ -1,8 +1,7 @@
-import AlpacaDisplay from "./AlpacaDisplay";
-import { Download } from "lucide-react";
+import { Download, Trash2 } from "lucide-react";
 
-const AlpacaCard = ({ item }) => {
-  console.log(item);
+const AlpacaCard = ({ item, deleteAlpaca }) => {
+  // console.log(item);
   return (
     <>
       {!item || item.length === 0 ? (
@@ -93,7 +92,7 @@ const AlpacaCard = ({ item }) => {
           </div>
 
           {/* Content Section */}
-          <div className="p-6">
+          <div className="flex flex-col p-6">
             {/* Header with Name and Download */}
             <div className="mb-4 flex items-start justify-between">
               <div className="flex-1">
@@ -121,6 +120,12 @@ const AlpacaCard = ({ item }) => {
               <p className="leading-relaxed text-gray-700">
                 {item.bio || "No bio available"}
               </p>
+            </div>
+            <div className="grow"></div>
+            <div>
+              <button onClick={() => deleteAlpaca(item.id)}>
+                <Trash2 className="mt-4 h-5 w-5 text-red-600" />
+              </button>
             </div>
           </div>
         </div>

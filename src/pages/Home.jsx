@@ -2,7 +2,7 @@ import { HeartCrack, Smile } from "lucide-react";
 import { Link } from "react-router-dom";
 import AlpacaCard from "../components/AlpacaCard";
 
-const Home = ({ data }) => {
+const Home = ({ data, deleteAlpaca }) => {
   // Convert data to proper array format
   const alpacaArray = Array.isArray(data) ? data : [];
 
@@ -37,7 +37,11 @@ const Home = ({ data }) => {
               {alpacaArray
                 .filter((item) => item && item.name && item.alpacaFeatures)
                 .map((item) => (
-                  <AlpacaCard key={item.id || item.name} item={item} />
+                  <AlpacaCard
+                    key={item.id || item.name}
+                    item={item}
+                    deleteAlpaca={deleteAlpaca}
+                  />
                 ))}
             </div>
           ) : (

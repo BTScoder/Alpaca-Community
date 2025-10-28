@@ -7,6 +7,7 @@ const AlpacaStyling = ({
   handleStylingChange,
   setCustomize,
   handleAlpacaSubmit,
+  randomAlpaca,
   customize,
 }) => {
   return (
@@ -17,6 +18,13 @@ const AlpacaStyling = ({
         </h2>
         <p>Time to style your alpaca! Choose from the options below:</p>
 
+        <button
+          type="submit"
+          className="mt-6 flex cursor-pointer items-center rounded-full border-2 border-blue-950 bg-blue-950 p-3 font-semibold text-white transition duration-150 hover:scale-105 hover:bg-white hover:text-blue-950 hover:shadow-2xl"
+          onClick={() => randomAlpaca()}
+        >
+          <ArrowLeft className="inline-block" />
+        </button>
         <div className="">
           <h2 className="mt-6 text-xl font-bold text-gray-500">Categories</h2>
           <div className="flex flex-wrap gap-5 py-5">

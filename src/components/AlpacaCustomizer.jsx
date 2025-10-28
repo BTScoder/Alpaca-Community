@@ -62,7 +62,36 @@ const AlpacaCustomizer = ({ setData, data }) => {
     setName("");
     setBio("");
   };
-  // console.log("Form Submitted", data);
+
+  // Random Alpaca
+  const randomAlpaca = () => {
+    if (!alpacaData) return;
+
+    const randomEars = Math.floor(Math.random() * alpacaData.ears.length);
+    const randomHair = Math.floor(Math.random() * alpacaData.hair.length);
+    const randomEyes = Math.floor(Math.random() * alpacaData.eyes.length);
+    const randomMouth = Math.floor(Math.random() * alpacaData.mouth.length);
+    const randomNeck = Math.floor(Math.random() * alpacaData.neck.length);
+    const randomLeg = Math.floor(Math.random() * alpacaData.leg.length);
+    const randomAccessories = Math.floor(
+      Math.random() * alpacaData.accessories.length,
+    );
+    const randomBackground = Math.floor(
+      Math.random() * alpacaData.background.length,
+    );
+
+    setAlpacaDesign({
+      hair: alpacaData.hair[randomHair].path,
+      ears: alpacaData.ears[randomEars].path,
+      eyes: alpacaData.eyes[randomEyes].path,
+      mouth: alpacaData.mouth[randomMouth].path,
+      neck: alpacaData.neck[randomNeck].path,
+      leg: alpacaData.leg[randomLeg].path,
+      accessories: alpacaData.accessories[randomAccessories].path,
+      background: alpacaData.background[randomBackground].path,
+      nose: "/alpaca/nose.png",
+    });
+  };
   return (
     <>
       <div className="container mx-auto">
@@ -90,6 +119,7 @@ const AlpacaCustomizer = ({ setData, data }) => {
               customize={customize}
               setCustomize={setCustomize}
               handleAlpacaSubmit={handleAlpacaSubmit}
+              randomAlpaca={randomAlpaca}
             />
           ) : (
             <AlpacaForm
