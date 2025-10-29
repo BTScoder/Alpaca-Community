@@ -1,7 +1,24 @@
+import { useRef } from "react";
+import html2canvas from "html2canvas";
 import { Download, Trash2 } from "lucide-react";
 
 const AlpacaCard = ({ item, deleteAlpaca }) => {
   // console.log(item);
+  const alpacaRef = useRef(null);
+  const handleDownload = async () => {
+    if (!alpacaRef.current) return;
+    const canvas = await html2canvas(alpacaRef.current, {
+      backgroundColor: null,
+      scale: 2,
+      useCORS: true,
+    });
+    const image = canvas.toDataURL("image/png");
+    const link = document.createElement("a");
+    link.href = image;
+    link.download = `${item.name || "alpaca"}.png`;
+
+    link.click();
+  };
   return (
     <>
       {!item || item.length === 0 ? (
@@ -18,6 +35,7 @@ const AlpacaCard = ({ item, deleteAlpaca }) => {
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
+            ref={alpacaRef}
           >
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative h-60 w-60">
@@ -107,6 +125,7 @@ const AlpacaCard = ({ item, deleteAlpaca }) => {
               <button
                 className="ml-4 rounded-full border-2 border-blue-950 bg-white p-3 text-blue-950 transition duration-150 hover:scale-110 hover:bg-blue-950 hover:text-white hover:shadow-lg"
                 aria-label="Download alpaca"
+                onClick={() => handleDownload()}
               >
                 <Download className="h-5 w-5" />
               </button>
